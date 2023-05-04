@@ -1,0 +1,104 @@
+html{
+    font-size: 16px;
+}
+
+/* header */
+
+header{
+    background-color: rgb(101, 101, 101);
+    color: white;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+
+h1{
+    padding-left: 1em;
+    font-size: 3rem;
+    font-family: 'Pacifico', cursive;
+    text-decoration: underline;
+}
+
+h1 a{
+    color: white;
+    text-decoration: none;
+}
+
+h1 a:hover{
+    color: rgb(11, 17, 107);
+}
+
+h1:hover{
+    color: rgb(11, 17, 107);
+}
+
+.lightbulbOff{
+    height: 3.5em;
+    width: 3.5em;
+    padding-left: 2em;
+    display: none;
+}
+
+.lightbulbOn{
+    height: 3.5em;
+    width: 3.5em;
+    padding-left: 2em;
+    display: none;
+    bottom: -9.5em;
+    left: 10em;
+    border-radius: 2em;
+    position: relative;
+}
+
+.nav-item{
+    padding: 1em 1em 1em 1em;
+    font-size: 1.5rem;
+}
+
+.nav-item{
+    padding: 1em .5em;
+}
+
+.nav-item a{
+    text-decoration: none;
+    color: white;
+    padding: .5em;
+}
+
+.nav-item a:hover{
+    color: rgb(11, 17, 107);
+}
+
+@media only screen and (max-width: 836px){
+    .nav-item{
+        font-size: 1.25rem;
+    }
+
+    h1{
+        font-size: 2.75rem;
+    }
+}
+
+@media only screen and (max-width: 732px){
+    nav {
+        flex-direction: column;
+    }
+    .nav-list{
+        padding: 0;
+    }
+    h1 {
+        margin-bottom: 0;
+        padding: 0;
+    }
+}
