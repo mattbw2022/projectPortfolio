@@ -8,23 +8,21 @@
     <link rel="stylesheet" href="./styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Cinzel:wght@400;600&family=Dancing+Script:wght@500&family=Gloria+Hallelujah&family=Great+Vibes&family=Pacifico&family=Playfair+Display&family=Yellowtail&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="content-container">
         <nav>
             <h1><a href="index.html">Matt Ward</a></h1>
             <Ul class="nav-list">
                 <li class="nav-item"><a href="./resume.html">Resume</a></li>
                 <li class="nav-item"><a href="#">Projects</a></li>
-                <li class="nav-item"><a href="#">Skills</a></li>
                 <li class="nav-item"><a href="#">Contact</a></li>
             </Ul>
         </nav>
     </header>
-    <br>
-    <div class="about-me-container">
-        <div class="about-me-info">
+    <div class="about-me-section">
+        <div class="content-container about-me-container">
             <h2>About Me</h2>
             <p>Hello, I'm Matt Ward, and I'm passionate about coding, golf and my family. 
                 When I'm not immersed in writing code or learning new programming languages, 
@@ -43,8 +41,16 @@
                     opportunities that align with my interests and expertise. Feel free to reach out to me to discuss 
                     any collaborative ventures or to simply chat about coding, sports, or life! </p>
         </div>
-        <img class="about-me-img" src="./static/aboutMeImg.jpg">
+        <div class="content-container about-me-container img-container">
+        </div>
     </div>
+    <footer class="content-container">
+        <ul class="nav-list footer-list">
+            <li class="nav-item footer-item"><p id="number">806-773-1797</p><img id="phone" src="./static/phone.png"></li>
+            <li class="nav-item footer-item"><p id="address">matthewbward123@gmail.com</p><img id="email" src="./static/email.png"></li>
+            <li class="nav-item footer-item"><img id="github" src="./static/github.png"></li>
+        </ul>
+    </footer>
     <br>
     <script src="./script.js"></script>
 
