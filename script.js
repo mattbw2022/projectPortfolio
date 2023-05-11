@@ -1,14 +1,4 @@
-// document.addEventListener('DOMContentLoaded', function() {
-//     let signature = document.getElementsByTagName('h1')[0];
-//     let fonts = ['Pacifico', 'Caveat', 'Cinzel', 'Dancing Script', 'Gloria Hallelujah', 'Great Vibes', 'Yellowtail'];
-//     function changeFont(){
-//         signature.style.fontFamily = fonts[Math.floor(Math.random()*fonts.length)];
-//     }
-
-//     setInterval(changeFont, 2000);
-
-//         changeFont();
-// });
+        // picture slideshow
 
 document.addEventListener('DOMContentLoaded', function() {
     let i = 0;
@@ -34,43 +24,36 @@ document.addEventListener('DOMContentLoaded', function() {
     
 });
 
-        // footer hover
+        // contact toggle
 
-let phone = document.getElementById('phone');
-let email = document.getElementById('email');
 let github = document.getElementById('github');
 let number = document.getElementById('number');
 let address = document.getElementById('address');
+let contactDropdown = document.getElementById('contact-dropdown');
+let hideButton = document.getElementById('hide-contact-dropdown');
 
-let hover = function(elm1, elm2){
-    elm1.style.display = 'none';
-    elm2.style.display = 'flex';
+let showInfo = function(){
+    let elements = Array.from(arguments);
+    console.log(elements);
+    elements.forEach(element => {
+        element.style.display = 'flex';        
+    });
 }
 
-let reset = function(elm1, elm2){
-    elm1.style.display = 'flex';
-    elm2.style.display = 'none';
+let hideInfo = function(elm1, elm2){
+    let elements = Array.from(arguments);
+
+    elements.forEach(element => {
+        element.style.display = 'none';        
+    });
 }
 
-let gitHover = function(){
-    github.style.display = 'none';
-    github.style.display = 'flex';
-}
-
-phone.onmouseover = function(){
-    hover(phone, number);
+contactDropdown.onclick = function(){
+    showInfo(address, number, github, hideButton);
+    hideInfo(contactDropdown);
 };
 
-number.onmouseleave = function(){
-    reset(phone, number);
-}
-
-email.onmouseover = function(){
-    hover(email, address);
+hideButton.onclick = function(){
+    hideInfo(address, number, github, hideButton);
+    showInfo(contactDropdown);
 };
-
-address.onmouseleave = function(){
-    reset(email, address);
-};
-
-
