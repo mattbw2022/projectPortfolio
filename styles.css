@@ -6,10 +6,12 @@ body{
     color: white;
 }
 
-/* header */
+/* Header */
 
 header{
-    margin-bottom: 5em;
+    position: fixed;
+    width: -webkit-fill-available;
+    margin-right: .4em;
 }
 
 .content-container{
@@ -127,7 +129,7 @@ h2{
 }
 
 .about-me-container{
-    margin: 0 0 1em 0;
+    margin: 12em 0 1em 0;
 }
 
 
@@ -164,10 +166,14 @@ h2{
         flex-direction: column-reverse;
     }
 
+    .about-me-container{
+        margin: 1em 0 1em 0;
+    }
+
     .img-container{
-        width: 20em;
+        width: 19.6em;
         height: 20em;
-        margin: 0 .5em .5em .5em;
+        margin: 12em .5em .5em .5em;
     }
 
     header{
@@ -175,7 +181,14 @@ h2{
     }
 }
 
-        /* contact */
+        /* Projects */
+
+.projects-container{
+    margin: 0 0 1em 0;
+    
+}
+
+        /* Contact */
 
 #github{
     height: 7em;

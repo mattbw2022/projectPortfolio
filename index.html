@@ -13,15 +13,15 @@
 <body>
     <header class="content-container">
         <nav>
-            <h1><a href="index.html">Matt Ward</a></h1>
+            <h1><a href="#about-me">Matt Ward</a></h1>
             <Ul class="nav-list">
                 <li class="nav-item"><a href="./resume.html">Resume</a></li>
-                <li class="nav-item"><a href="#">Projects</a></li>
-                <li class="nav-item"><a href="#">Contact</a></li>
+                <li class="nav-item"><a href="#projects">Projects</a></li>
+                <li class="nav-item"><a href="#contact-section">Contact</a></li>
             </Ul>
         </nav>
     </header>
-    <div class="about-me-section">
+    <section id="about-me" class="about-me-section">
         <div class="content-container about-me-container">
             <h2>About Me</h2>
             <p>Hello, I'm Matt Ward, and I'm passionate about coding, golf and my family. 
@@ -43,16 +43,43 @@
         </div>
         <div class="content-container about-me-container img-container">
         </div>
-    </div>
-    <div class="center-contact">
-        <div class="content-container contact-info">
-                <h2 id="contact-dropdown">Contact</h2>
-                <h2 id="hide-contact-dropdown">Contact</h2>
-                <h3 id="number">806-773-1797</h3>
-                <h3 id="address">matthewbward123@gmail.com</h3>
-                <a href="https://github.com/mattbw2022"><img id="github" src="./static/github.png"></a>        
+    </section>
+    <section id="projects">
+        <div class="content-container projects-container">
+            <h2>Projects</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Project Name</th>
+                        <th>Languages Used</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="https://github.com/mattbw2022/responsiveClubPage">responsiveClubPage</a></td>
+                        <td><ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul></td>
+                        <td>Creation of responsive website for a fictional club.</td>
+                    </tr>
+
+                </tbody>
+            </table>
         </div>
-    </div>
+    </section>
+    <section id="contact-section">
+        <div class="center-contact">
+            <div class="content-container contact-info">
+                    <h2 id="contact-dropdown">Contact</h2>
+                    <h2 id="hide-contact-dropdown">Contact</h2>
+                    <h3 id="number">806-773-1797</h3>
+                    <h3 id="address">matthewbward123@gmail.com</h3>
+                    <a href="https://github.com/mattbw2022"><img id="github" src="./static/github.png"></a>        
+            </div>
+        </div>
+    </section>
     <br>
     <script src="./script.js"></script>
 
