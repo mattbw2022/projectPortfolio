@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matt's Portfolio</title>
+    <title>Projects</title>
     <link rel="stylesheet" href="./styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,400;1,800&family=Yellowtail&display=swap" rel="stylesheet"></head>
     <script src="script.js"></script>
+</head>
 <body>
     <header>
         <div class="row">
@@ -36,24 +36,34 @@
             <li class="nav-link"><a id="social-btn">Social</a></li>
         </Ul>
     </nav>
-    <section id="about-me-container" class="about-me-section">
-        <div id="about-me-text">
-            <h2>About Me</h2>
-            <p>Hello, I'm Matt Ward, an upstart software developer with experience in C#, PHP, Python, and more. When I'm not coding, 
-                I enjoy sports and spending quality time with my family. <br><br>Past experiences working in education and commercial 
-                real estate have provided me with opportunities to lead, excel in a team environment, and sharpen my communicative 
-                skills. I am excited to jump into the professional software world and immediately help my team. 
-                Check out my projects and let's connect</p>
-        </div>
-        <div id="family-img-container">
-            <img id="family-img" src="./static/family1.jpg" alt="family photo">
-        </div>
+    <section id="projects">
+        <a href="https://recipe-planner-2023.onrender.com/">
+            <div class="project-container">
+                <h2>recipePlanner</h2>
+                <img src="./static/recipes.PNG" alt="Recipe browsing image" class="project-img">
+                <h3>Tools: Node.js, Express.js, Pug, PostgreSQL, CSS, HTML</h3>
+            </div>
+        </a>
+        <a href="http://mattbw.pythonanywhere.com/">
+            <div class="project-container" >
+                <h2>Sports Trivia</h2>
+                <img src="./static/sports-trivia-img.PNG" alt="Image of a sports trivia question" class="project-img">
+                <h3>Tools: Python, Flask, Jinja, Sqlite3, CSS, HTML  </h3>
+            </div>
+        </a>
+        <a href="">
+            <div class="project-container">
+                <h2>Jammming</h2>
+                <img src="" alt="" class="project-img">
+                <h3>Tools: React, CSS, JavaScript, HTML</h3>
+            </div>
+        </a>
     </section>
     <div id="contact-info-container" class="toggle-info">
         <div class="row">
             <img id="headshot" src="./static/profile.jpg" alt="headshot">
             <div id="contact-info">
-                <p id="number">806-773-1797</p>
+                <h3 id="number">806-773-1797</h3>
                 <a href="mailto:matthewbward123@gmail.com">matthewbward123@gmail.com</a>
             </div>  
         </div>
@@ -73,6 +83,6 @@
                 <img class="social-img" src="./static/x-logo.png" alt="X Logo">
             </a>
         </div>
-    </div>     
+    </div> 
 </body>
 </html>

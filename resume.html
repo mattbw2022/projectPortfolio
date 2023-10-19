@@ -5,8 +5,140 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,400;1,800&family=Yellowtail&display=swap" rel="stylesheet"></head>
+    <script src="./script.js"></script>
 </head>
 <body>
-    <h1>This is the Resume Page</h1>
+    <header>
+        <div class="row">
+            <a href="/index.html" id="mw-logo-container">
+                <img id="mw-logo" src="/static/MW-logo.png" alt="mw logo">
+            </a>
+            <img src="./static/dropdown.png" alt="dropdown" id="dropdown-btn">
+            <img src="./static/hover-dropdown.png" alt="dark-dropdown" id="hover-dropdown">
+            <nav id="horizontal-nav">
+                <Ul id="nav-list">
+                    <li class="nav-link"><a href="./resume.html">Resume</a></li>
+                    <li class="nav-link"><a href="./projects.html">Projects</a></li>
+                    <li class="nav-link"><a id="contact-btn">Contact</a></li>
+                    <li class="nav-link"><a id="social-btn">Social</a></li>
+                </Ul>
+            </nav>
+        </div>
+    </header>
+    <nav id="vertical-nav">
+        <Ul id="nav-list">
+            <li class="nav-link"><a href="./resume.html">Resume</a></li>
+            <li class="nav-link"><a href="./projects.html">Projects</a></li>
+            <li class="nav-link"><a id="contact-btn">Contact</a></li>
+            <li class="nav-link"><a id="social-btn">Social</a></li>
+        </Ul>
+    </nav>
+    <div id="resume-container">
+        <section id="heading" class="format-sections">
+            <h1>Matt Ward</h1>
+            <p>SOFTWARE DEVELOPER</p>
+            <p>(806) 773-1797 | Lubbock, TX | <a href="mailto:matthewbward123@gmail.com">matthewbward123@gmail.com</a></p>
+        </section>
+
+        <section id="profile" class="format-sections">
+            <h2>Profile</h2>
+            <p>A dedicated software developer with proficiency in C#, PHP, Python, JavaScript, HTML, CSS, and C. Proven track record in creating dynamic web applications, utilizing various frameworks and technologies. Eager to contribute technical expertise and collaborate with experienced professionals to deliver high-quality software solutions.</p>
+        </section>
+
+        <section id="education" class="format-sections">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <p>May 2023 - October 2023 | Codecademy</p>
+                    <p>Full-Stack Engineering Path</p>
+                    <p>Learn C# Course, Computer Software Engineering</p>
+                </li>
+                <li>
+                    <p>Nov 2022 - Jan 2023 | CS50</p>
+                    <p>Completed coursework in Back-End Web Development, Version Control, sqlite3, CSS, Front-End Development, Python</p>
+                </li>
+                <li>
+                    <p>2008 - 2012 | Texas Tech University</p>
+                    <p>Bachelor's Degree, Kinesiology and Exercise Science</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="resume-projects" class="format-sections">
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <p>March 2023 | Sports Trivia Web Application</p>
+                    <p>Developed using Flask, Python, and SQLite3 for dynamic content.</p>
+                </li>
+                <li>
+                    <p>May 20XX | Recipe Planning and Grocery List Web Application</p>
+                    <p>Utilized Node.js, Express, PostgreSQL, and Jade for efficient data management.</p>
+                </li>
+                <li>
+                    <p>June 2023 | Front-End Playlist Creation Tool</p>
+                    <p>Created using React, showcasing proficiency in JavaScript and CSS.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="experience" class="format-sections">
+            <h2>Work Experience</h2>
+            <ul>
+                <li>
+                    <p>January 2023 - Present | Career Transition</p>
+                    <p>Lubbock, TX</p>
+                    <p>Learning and improving my software development skills to transition from commercial real estate to software development.</p>
+                </li>
+                <li>
+                    <p>June 2017 - December 2022 | Real Estate Agent</p>
+                    <p>WestMark Commercial, Lubbock, Texas</p>
+                    <p>Managed commercial real estate transactions, negotiations, and client relationships.</p>
+                </li>
+                <li>
+                    <p>August 2012 – May 2017 | Physical Education Teacher</p>
+                    <p>Lubbock ISD, Lubbock, Texas</p>
+                    <p>Designed and implemented physical education curriculum for diverse student populations.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="skills" class="format-sections">
+            <h2>Skills</h2>
+            <p>Back-End Web Development: C#, Python, Node.js, Express.js</p>
+            <p>Front-End Development: HTML, CSS, JavaScript, React.js</p>
+            <p>Database: PostgreSQL, SQLite3</p>
+            <p>Version Control: Git</p>
+            <p>Web Frameworks: Flask, Express.js</p>
+            <p>Templating Engines: Jinja, Jade</p>
+        </section>
+    <div id="contact-info-container" class="toggle-info">
+        <div class="row">
+            <img id="headshot" src="./static/profile.jpg" alt="headshot">
+            <div id="contact-info">
+                <p id="number">806-773-1797</p>
+                <a href="mailto:matthewbward123@gmail.com">matthewbward123@gmail.com</a>
+            </div>  
+        </div>
+    </div>    
+    <div id="social-info-container" class="toggle-info">
+        <div class="row">
+            <a href="https://www.linkedin.com/in/matt-ward-ab51a414a/">
+                <img class="social-img" src="./static/linkedin-logo.png" alt="LinkedIn Logo">
+            </a>
+            <a href="https://github.com/mattbw2022">
+                <img class="social-img" src="./static/github-logo.png" alt="GitHub Logo">
+            </a>
+            <a href="https://www.facebook.com/matt.ward.1441810">
+                <img class="social-img" src="./static/fb-logo.png" alt="Facebook Logo">
+            </a>
+            <a href="https://www.twitter.com/matthewbward123">
+                <img class="social-img" src="./static/x-logo.png" alt="X Logo">
+            </a>
+        </div>    
 </body>
 </html>

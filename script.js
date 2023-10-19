@@ -1,59 +1,120 @@
-        // picture slideshow
+document.addEventListener('DOMContentLoaded', ()=> {
+    const socialBtn = document.getElementById('social-btn');
+    const contactBtn = document.getElementById('contact-btn');
+    const social = document.getElementById('social-info-container');
+    const contact = document.getElementById('contact-info-container');
+    const dropdown = document.getElementById('dropdown-btn');
+    const hoverDropdown = document.getElementById('hover-dropdown');
+    const horizontalNav = document.getElementById('horizontal-nav');
+    const verticalNav = document.getElementById('vertical-nav')
 
-document.addEventListener('DOMContentLoaded', function() {
-    let i = 0;
-    let imgContainer = document.querySelector('.img-container');
-    let photos = ['./static/aboutMeImg.jpg', './static/cooking1.jpg', './static/family1.jpg', './static/family2.jpg',
-     './static/jackson1.jpg', './static/jami-jackson1.jpg', './static/jami-william1.jpg', './static/william-jackson1.jpg', './static/william1.jpg'];
+    dropdown.addEventListener('mouseover', ()=>{
+        dropdown.style.display = 'none';
+        hoverDropdown.style.display = 'flex';
+    });
 
-     function changePhoto(){
-        imgContainer.classList.add('fade-out');
-        setTimeout(function() {
-            imgContainer.style.backgroundImage = `url(${photos[i]})`;
-            imgContainer.classList.remove('fade-out');
-            i++;
-            if (i === photos.length){
-                i = 0;
+    hoverDropdown.addEventListener('mouseleave', ()=>{
+        dropdown.style.display = 'flex';
+        hoverDropdown.style.display = 'none';
+    })
+
+    document.addEventListener('click', (event)=>{
+        const clickedElement = event.target;
+        if (clickedElement.id === hoverDropdown.id){
+            if (verticalNav.style.display === 'none' || verticalNav.style.display === ''){
+                verticalNav.style.display = 'flex';
             }
-        }, 600);
-     }
-
-     setInterval(changePhoto, 3000);
-
-        changePhoto();
     
+            else{
+                verticalNav.style.display = 'none';
+            }
+        }
+        else{
+            verticalNav.style.display = 'none';
+        }
+
+    });
+
+    document.addEventListener('click', (event)=>{
+        const target = event.target;
+        if (target.id === socialBtn.id){
+            if (social.style.display === 'none' || social.style.display === ''){
+                
+                social.style.display = 'flex';
+            }
+            else{
+                
+                social.style.display = 'none';
+            }
+        }
+        else if (target.id === contactBtn.id){
+            if (contact.style.display === 'none' || contact.style.display === ''){
+                
+                contact.style.display = 'flex';
+            }
+            else{
+                
+                contact.style.display = 'none';
+            }
+        }
+
+        else{
+            contact.style.display = 'none';
+            social.style.display = 'none';
+        }
+        
+    });
+
+    
+    function trackScreenSize() {
+        const screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+        const dropdownBtn = document.getElementById('dropdown-btn');
+        console.log(screenWidth);
+        if (screenWidth <= 743 && (hoverDropdown.style.display === 'none' || hoverDropdown.style.display === '')){
+            dropdownBtn.style.display = 'flex';
+        }
+        else{
+            dropdownBtn.style.display = 'none';
+        }
+    }
+    
+    trackScreenSize();
+    
+    window.addEventListener('resize', trackScreenSize);
 });
+
+
 
         // contact toggle
 
-let github = document.getElementById('github');
-let number = document.getElementById('number');
-let address = document.getElementById('address');
-let contactDropdown = document.getElementById('contact-dropdown');
-let hideButton = document.getElementById('hide-contact-dropdown');
+// let github = document.getElementById('github');
+// let number = document.getElementById('number');
+// let address = document.getElementById('address');
+// let contactDropdown = document.getElementById('contact-dropdown');
+// let hideButton = document.getElementById('hide-contact-dropdown');
 
-let showInfo = function(){
-    let elements = Array.from(arguments);
-    console.log(elements);
-    elements.forEach(element => {
-        element.style.display = 'flex';        
-    });
-}
+// let showInfo = function(){
+//     let elements = Array.from(arguments);
+//     console.log(elements);
+//     elements.forEach(element => {
+//         element.style.display = 'flex';        
+//     });
+// }
 
-let hideInfo = function(elm1, elm2){
-    let elements = Array.from(arguments);
+// let hideInfo = function(elm1, elm2){
+//     let elements = Array.from(arguments);
 
-    elements.forEach(element => {
-        element.style.display = 'none';        
-    });
-}
+//     elements.forEach(element => {
+//         element.style.display = 'none';        
+//     });
+// }
 
-contactDropdown.onclick = function(){
-    showInfo(address, number, github, hideButton);
-    hideInfo(contactDropdown);
-};
+// contactDropdown.onclick = function(){
+//     showInfo(address, number, github, hideButton);
+//     hideInfo(contactDropdown);
+// };
 
-hideButton.onclick = function(){
-    hideInfo(address, number, github, hideButton);
-    showInfo(contactDropdown);
-};
+// hideButton.onclick = function(){
+//     hideInfo(address, number, github, hideButton);
+//     showInfo(contactDropdown);
+// };
