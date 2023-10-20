@@ -5,8 +5,29 @@ document.addEventListener('DOMContentLoaded', ()=> {
     const contact = document.getElementById('contact-info-container');
     const dropdown = document.getElementById('dropdown-btn');
     const hoverDropdown = document.getElementById('hover-dropdown');
-    const horizontalNav = document.getElementById('horizontal-nav');
     const verticalNav = document.getElementById('vertical-nav')
+    const logo = document.getElementById('mw-logo-container');
+    const logoText = document.getElementById('mw-text');
+    const linkedIn = document.getElementById('linked-in');
+    const github = document.getElementById('github');
+    const facebook = document.getElementById('fb');
+    const x = document.getElementById('x');
+
+    linkedIn.addEventListener('mouseover', ()=>{toggleImage(linkedIn.id, './static/hover-linkedin.png')});
+    linkedIn.addEventListener('mouseleave', ()=>{ toggleImage(linkedIn.id, './static/linkedin-logo.png')});
+    github.addEventListener('mouseover', ()=>{ toggleImage(github.id, './static/hover-github.png')});
+    github.addEventListener('mouseleave', ()=>{ toggleImage(github.id, './static/github-logo.png')});
+    facebook.addEventListener('mouseover', ()=>{ toggleImage(facebook.id, './static/hover-fb.png')});
+    facebook.addEventListener('mouseleave', ()=>{ toggleImage(facebook.id, './static/fb-logo.png')});
+    x.addEventListener('mouseover', ()=>{ toggleImage(x.id, './static/hover-x.png')});
+    x.addEventListener('mouseleave', ()=>{ toggleImage(x.id, './static/x-logo.png')});
+
+    logo.addEventListener('mouseover', () => {
+        logoText.style.color = '#7a7a7a';
+    });
+    logo.addEventListener('mouseleave', ()=> {
+        logoText.style.color = 'white';
+    });
 
     dropdown.addEventListener('mouseover', ()=>{
         dropdown.style.display = 'none';
@@ -82,6 +103,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
     window.addEventListener('resize', trackScreenSize);
 });
 
+<<<<<<< Updated upstream
 
 
         // contact toggle
@@ -116,3 +138,9 @@ document.addEventListener('DOMContentLoaded', ()=> {
 //     hideInfo(address, number, github, hideButton);
 //     showInfo(contactDropdown);
 // };
+=======
+const toggleImage = (id, newImage) =>{
+    const imgElement = document.getElementById(id);
+    imgElement.src = newImage;
+}
+>>>>>>> Stashed changes
