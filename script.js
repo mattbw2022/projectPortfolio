@@ -103,44 +103,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
     window.addEventListener('resize', trackScreenSize);
 });
 
-<<<<<<< Updated upstream
-
-
-        // contact toggle
-
-// let github = document.getElementById('github');
-// let number = document.getElementById('number');
-// let address = document.getElementById('address');
-// let contactDropdown = document.getElementById('contact-dropdown');
-// let hideButton = document.getElementById('hide-contact-dropdown');
-
-// let showInfo = function(){
-//     let elements = Array.from(arguments);
-//     elements.forEach(element => {
-//         element.style.display = 'flex';        
-//     });
-// }
-
-// let hideInfo = function(elm1, elm2){
-//     let elements = Array.from(arguments);
-
-//     elements.forEach(element => {
-//         element.style.display = 'none';        
-//     });
-// }
-
-// contactDropdown.onclick = function(){
-//     showInfo(address, number, github, hideButton);
-//     hideInfo(contactDropdown);
-// };
-
-// hideButton.onclick = function(){
-//     hideInfo(address, number, github, hideButton);
-//     showInfo(contactDropdown);
-// };
-=======
 const toggleImage = (id, newImage) =>{
     const imgElement = document.getElementById(id);
     imgElement.src = newImage;
 }
->>>>>>> Stashed changes
