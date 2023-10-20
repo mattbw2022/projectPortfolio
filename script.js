@@ -69,7 +69,6 @@ document.addEventListener('DOMContentLoaded', ()=> {
     function trackScreenSize() {
         const screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
         const dropdownBtn = document.getElementById('dropdown-btn');
-        console.log(screenWidth);
         if (screenWidth <= 743 && (hoverDropdown.style.display === 'none' || hoverDropdown.style.display === '')){
             dropdownBtn.style.display = 'flex';
         }
