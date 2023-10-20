@@ -94,7 +94,6 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
 // let showInfo = function(){
 //     let elements = Array.from(arguments);
-//     console.log(elements);
 //     elements.forEach(element => {
 //         element.style.display = 'flex';        
 //     });
