@@ -212,11 +212,11 @@ footer{
     }
 
     #social-info-container{
-        top: 100px;
+        top: 145px;
     }
 
     #contact-info-container{
-        top: 100px;
+        top: 145px;
     }
 }
 
@@ -241,6 +241,22 @@ footer{
     border-color: #a6a6a6;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     flex-direction: column;
+}
+
+#resume-contact{
+    color: black;
+}
+
+#resume-contact a{
+    color: black;
+}
+
+#resume-contact a:visited{
+    color: black;
+}
+
+#resume-contact a:hover{
+    text-decoration: underline;
 }
 
 .format-sections{
